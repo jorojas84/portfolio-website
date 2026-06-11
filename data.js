@@ -38,7 +38,7 @@ window.SITE_DATA = {
     // inferior izquierdo del banner. Usa un PNG con FONDO TRANSPARENTE
     // para que se mezcle. Ej: "assets/img/silueta.png".
     // Si la dejas "", se muestra una silueta de marcador de posición.
-    foto: "assets/img/1766263146200.jpeg",
+    foto: "assets/img/1.jpeg",
   },
 
   /* ---------- CONTACTO Y REDES ---------- */
