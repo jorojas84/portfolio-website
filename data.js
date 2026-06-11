@@ -7,11 +7,11 @@ window.SITE_DATA = {
 
   /* ---------- PERFIL / BANNER ---------- */
   perfil: {
-    nombre: "Jose Miguel Rojas",
-    profesion: "Estudiante de Ciencia de Datos y Diseñador Industrial",
+    nombre: "Jose Rojas",
+    profesion: "Estudiante de Ciencia de Datos · Diseñador Industrial",
     // Párrafo breve (2 líneas aprox.)
     resumen:
-      "Base sólida en SQL, Python y Power BI. Aprendo construyendo: cada proyecto de este portafolio resuelve una pregunta real con datos reales.",
+      "5 años de experiencia internacional en entornos técnicos y analíticos. Actualmente cursando Ciencia de Datos, con base en Python, Excel y control de versiones. Bilingüe (ES/EN).",
     // Texto del badge de disponibilidad (déjalo "" para ocultarlo)
     disponibilidad: "Disponible para trabajo presencial o remoto",
     // Foto del banner: pon tu imagen en assets/img/ y escribe la ruta aquí.
@@ -23,7 +23,7 @@ window.SITE_DATA = {
   contacto: {
     email: "jocmiguel2010@gmail.com",
     telefono: "+57-318-103-8888",
-    ciudad: "Colombia",
+    ciudad: "Sincelejo, Colombia",
     linkedin: "https://www.linkedin.com/in/jr97/",
     github: "https://github.com/jorojas84",
     tableau: "", // link a Tableau Public; "" para ocultarlo
@@ -93,18 +93,18 @@ window.SITE_DATA = {
   /* ---------- EDUCACIÓN ---------- */
   educacion: [
     {
-      sigla: "U",            // letra del cuadrito
+      sigla: "DS",           // letra del cuadrito
       siglaOscura: true,     // true = cuadrito oscuro, false = claro
-      titulo: "Licenciatura en Economía",
-      lugar: "Universidad Nacional · 2019 – 2023",
-      detalle: "Enfoque en estadística y econometría. Tesis con análisis de datos de consumo.",
+      titulo: "B.Sc. Ciencia de Datos",
+      lugar: "Universidad de La Salle · Ene 2025 – Actualidad",
+      detalle: "Programa 100% en línea. Cubre estadística, machine learning, bases de datos y programación en Python.",
     },
     {
-      sigla: "B",
+      sigla: "DI",
       siglaOscura: false,
-      titulo: "Bootcamp de Análisis de Datos",
-      lugar: "Plataforma online · 2025 · 400 h",
-      detalle: "SQL, Python, visualización y storytelling con datos. Proyecto final con datos reales.",
+      titulo: "B.Sc. Diseño Industrial",
+      lugar: "Universidad del Norte · 2015 – 2018",
+      detalle: "Medalla de Plata — mejor graduado de la cohorte. Formación en pensamiento analítico, visualización y modelado técnico.",
     },
   ],
 
@@ -119,31 +119,23 @@ window.SITE_DATA = {
 
   /* ---------- EXPERIENCIA LABORAL (línea de tiempo) ---------- */
   experiencia: {
-    rangoCabecera: "2022 – actualidad", // texto a la derecha del título
+    rangoCabecera: "2019 – actualidad", // texto a la derecha del título
     items: [
       {
-        fechas: "Ene 2025 – hoy",
-        duracion: "1 año 6 meses",
-        puesto: "Analista de datos freelance",
-        lugar: "Negocio local · Remoto",
+        fechas: "Jul 2021 – Jun 2026",
+        duracion: "5 años",
+        puesto: "Technical Support Specialist",
+        lugar: "RebusFarm · Remoto (internacional)",
         detalle:
-          "Organicé el historial de ventas en Excel y construí un reporte mensual automático con tablas dinámicas; el dueño ahora revisa sus márgenes en 10 minutos en vez de una tarde entera.",
+          "Soporte técnico bilingüe (ES/EN) a una base global de clientes. Monitoreé jobs de renderizado en tiempo real, participé en ciclos de QA antes de cada release y documenté problemas recurrentes en la base de conocimiento interna. +200 reseñas de chat con calificación destacada.",
       },
       {
-        fechas: "Jun – Dic 2024",
-        duracion: "7 meses",
-        puesto: "Voluntariado de datos",
-        lugar: "ONG · Medio tiempo",
+        fechas: "Feb 2019 – Ene 2021",
+        duracion: "2 años",
+        puesto: "Diseñador Industrial",
+        lugar: "Stuario Design Lab",
         detalle:
-          "Limpié y normalicé la base de donantes (3.000 registros) y monté un dashboard de seguimiento de campañas que el equipo sigue usando.",
-      },
-      {
-        fechas: "Mar 2022 – Feb 2023",
-        duracion: "1 año",
-        puesto: "Proyecto académico de tesis",
-        lugar: "Universidad Nacional",
-        detalle:
-          "Diseñé una encuesta, recogí 300 respuestas y realicé el análisis estadístico completo (descriptivos, correlaciones, regresión) para la tesis de licenciatura.",
+          "Diseño, renderizado y planos técnicos para piezas de mobiliario e interiores. Manejo avanzado de Blender, Cinema 4D y 3ds Max; base sólida en visualización y comunicación de datos espaciales.",
       },
     ],
   },
@@ -152,34 +144,35 @@ window.SITE_DATA = {
      nivel: porcentaje de la barra (0–100).
      etiquetaNivel: texto que aparece a la derecha.                   */
   skills: {
-    subtitulo: "8 herramientas", // texto pequeño junto al título
+    subtitulo: "9 herramientas", // texto pequeño junto al título
     grupos: [
       {
-        grupo: "Lenguajes y consultas",
+        grupo: "Datos y programación",
         items: [
-          { sigla: "SQL", nombre: "SQL · PostgreSQL", nivel: 85, etiquetaNivel: "Avanzado" },
-          { sigla: "PY", nombre: "Python · pandas", nivel: 70, etiquetaNivel: "Intermedio" },
+          { sigla: "PY", nombre: "Python · pandas · OOP", nivel: 65, etiquetaNivel: "Intermedio" },
+          { sigla: "SQL", nombre: "SQL", nivel: 55, etiquetaNivel: "En desarrollo" },
+          { sigla: "GIT", nombre: "Git · GitHub", nivel: 60, etiquetaNivel: "Intermedio" },
         ],
       },
       {
-        grupo: "Visualización",
+        grupo: "Hojas de cálculo y ofimática",
         items: [
-          { sigla: "PBI", nombre: "Power BI · DAX", nivel: 80, etiquetaNivel: "Avanzado" },
-          { sigla: "TAB", nombre: "Tableau", nivel: 55, etiquetaNivel: "Intermedio" },
+          { sigla: "XLS", nombre: "Excel · tablas dinámicas", nivel: 85, etiquetaNivel: "Avanzado" },
+          { sigla: "MS", nombre: "Microsoft Office Suite", nivel: 85, etiquetaNivel: "Avanzado" },
         ],
       },
       {
-        grupo: "Hojas de cálculo",
+        grupo: "Diseño y 3D",
         items: [
-          { sigla: "XLS", nombre: "Excel · tablas dinámicas", nivel: 90, etiquetaNivel: "Avanzado" },
-          { sigla: "GS", nombre: "Google Sheets", nivel: 85, etiquetaNivel: "Avanzado" },
+          { sigla: "BL", nombre: "Blender · Cinema 4D", nivel: 80, etiquetaNivel: "Avanzado" },
+          { sigla: "3D", nombre: "3ds Max · Maya", nivel: 70, etiquetaNivel: "Intermedio" },
         ],
       },
       {
-        grupo: "Otros",
+        grupo: "Idiomas",
         items: [
-          { sigla: "GIT", nombre: "Git · GitHub", nivel: 50, etiquetaNivel: "Básico" },
-          { sigla: "ST", nombre: "Estadística aplicada", nivel: 75, etiquetaNivel: "Intermedio" },
+          { sigla: "ES", nombre: "Español", nivel: 100, etiquetaNivel: "Nativo" },
+          { sigla: "EN", nombre: "English", nivel: 90, etiquetaNivel: "Professional" },
         ],
       },
     ],
