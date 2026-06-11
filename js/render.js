@@ -222,7 +222,14 @@
       group.appendChild(el("div", "skill-group-label", g.grupo));
       g.items.forEach((s) => {
         const row = el("div", "skill-row");
-        row.appendChild(el("div", "skill-icon", s.sigla));
+        const icon = el("div", "skill-icon", s.sigla);
+        if (s.color) {
+          // tinte suave del color para fondo/borde + texto a color pleno
+          icon.style.color = s.color;
+          icon.style.background = s.color + "1A"; // ~10% alpha
+          icon.style.borderColor = s.color + "40"; // ~25% alpha
+        }
+        row.appendChild(icon);
         const info = el("div", "skill-info");
         info.appendChild(el("div", "skill-name", s.nombre));
         const bar = el("div", "skill-bar");

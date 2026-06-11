@@ -169,37 +169,39 @@ window.SITE_DATA = {
 
   /* ---------- SKILLS & SOFTWARE ----------
      nivel: porcentaje de la barra (0–100).
-     etiquetaNivel: texto que aparece a la derecha.                   */
+     etiquetaNivel: texto que aparece a la derecha.
+     color: color del iconito (sigla). Paleta sobria abajo; cambia el
+            hex si quieres. Déjalo sin poner para que salga gris neutro. */
   skills: {
     subtitulo: "9 herramientas", // texto pequeño junto al título
     grupos: [
       {
         grupo: "Datos y programación",
         items: [
-          { sigla: "PY", nombre: "Python · pandas · OOP", nivel: 65, etiquetaNivel: "Intermedio" },
-          { sigla: "SQL", nombre: "SQL", nivel: 55, etiquetaNivel: "En desarrollo" },
-          { sigla: "GIT", nombre: "Git · GitHub", nivel: 60, etiquetaNivel: "Intermedio" },
+          { sigla: "PY", nombre: "Python · pandas · OOP", nivel: 65, etiquetaNivel: "Intermedio", color: "#3F6E8C" },
+          { sigla: "SQL", nombre: "SQL", nivel: 55, etiquetaNivel: "En desarrollo", color: "#4E7C6B" },
+          { sigla: "GIT", nombre: "Git · GitHub", nivel: 60, etiquetaNivel: "Intermedio", color: "#9C5B4E" },
         ],
       },
       {
         grupo: "Hojas de cálculo y ofimática",
         items: [
-          { sigla: "XLS", nombre: "Excel · tablas dinámicas", nivel: 85, etiquetaNivel: "Avanzado" },
-          { sigla: "MS", nombre: "Microsoft Office Suite", nivel: 85, etiquetaNivel: "Avanzado" },
+          { sigla: "XLS", nombre: "Excel · tablas dinámicas", nivel: 85, etiquetaNivel: "Avanzado", color: "#4E7C6B" },
+          { sigla: "MS", nombre: "Microsoft Office Suite", nivel: 85, etiquetaNivel: "Avanzado", color: "#6A6A93" },
         ],
       },
       {
         grupo: "Diseño y 3D",
         items: [
-          { sigla: "BL", nombre: "Blender · Cinema 4D", nivel: 80, etiquetaNivel: "Avanzado" },
-          { sigla: "3D", nombre: "3ds Max · Maya", nivel: 70, etiquetaNivel: "Intermedio" },
+          { sigla: "BL", nombre: "Blender · Cinema 4D", nivel: 80, etiquetaNivel: "Avanzado", color: "#B07A4B" },
+          { sigla: "3D", nombre: "3ds Max · Maya", nivel: 70, etiquetaNivel: "Intermedio", color: "#856B9E" },
         ],
       },
       {
         grupo: "Idiomas",
         items: [
-          { sigla: "ES", nombre: "Español", nivel: 100, etiquetaNivel: "Nativo" },
-          { sigla: "EN", nombre: "English", nivel: 90, etiquetaNivel: "Professional" },
+          { sigla: "ES", nombre: "Español", nivel: 100, etiquetaNivel: "Nativo", color: "#9C5B4E" },
+          { sigla: "EN", nombre: "English", nivel: 90, etiquetaNivel: "Professional", color: "#3F6E8C" },
         ],
       },
     ],
