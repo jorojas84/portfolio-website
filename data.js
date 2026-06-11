@@ -27,8 +27,8 @@ window.SITE_DATA = {
 
   /* ---------- PERFIL / BANNER ---------- */
   perfil: {
-    nombre: "Jose Rojas",
-    profesion: "Estudiante de Ciencia de Datos · Diseñador Industrial",
+    nombre: "Jose Miguel Rojas",
+    profesion: "Estudiante de Ciencia de Datos - Diseñador Industrial",
     // Párrafo breve (2 líneas aprox.)
     resumen:
       "5 años de experiencia internacional en entornos técnicos y analíticos. Actualmente cursando Ciencia de Datos, con base en Python, Excel y control de versiones. Bilingüe (ES/EN).",
@@ -38,14 +38,14 @@ window.SITE_DATA = {
     // inferior izquierdo del banner. Usa un PNG con FONDO TRANSPARENTE
     // para que se mezcle. Ej: "assets/img/silueta.png".
     // Si la dejas "", se muestra una silueta de marcador de posición.
-    foto: "",
+    foto: "assets/img/1766263146200.jpeg",
   },
 
   /* ---------- CONTACTO Y REDES ---------- */
   contacto: {
     email: "jocmiguel2010@gmail.com",
     telefono: "+57-318-103-8888",
-    ciudad: "Sincelejo, Colombia",
+    ciudad: "Colombia",
     linkedin: "https://www.linkedin.com/in/jr97/",
     github: "https://github.com/jorojas84",
     tableau: "", // link a Tableau Public; "" para ocultarlo
