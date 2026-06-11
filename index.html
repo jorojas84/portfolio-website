@@ -29,17 +29,14 @@
         </div>
         <div id="hero-summary" class="hero-summary"></div>
       </div>
-      <div id="stats-grid" class="stats-grid"></div>
     </div>
   </header>
 
-  <!-- ============ BODY GRID ============ -->
-  <main class="shell body-grid">
+  <!-- ============ BODY ============ -->
+  <main class="shell body">
 
-    <!-- columna izquierda -->
-    <div class="col-left">
-
-      <!-- proyectos -->
+    <!-- fila superior: proyectos + skills -->
+    <div class="row-top">
       <section id="proyectos" class="card rise-1">
         <div class="projects-head">
           <div class="projects-head-left">
@@ -51,37 +48,36 @@
         <div id="projects-grid" class="projects-grid"></div>
       </section>
 
-      <!-- educación + certificaciones -->
-      <section id="educacion" class="edu-grid rise-3">
-        <div class="card edu-card">
-          <div class="card-title">Educación</div>
-          <div id="edu-list" style="display: flex; flex-direction: column; gap: 12px;"></div>
+      <aside id="skills" class="card skills-card rise-2">
+        <div class="skills-head">
+          <div class="card-title">Skills &amp; software</div>
+          <div id="skills-count" class="skills-count"></div>
         </div>
-        <div class="card cert-card">
-          <div class="card-title">Certificaciones</div>
-          <div id="cert-list" class="cert-list"></div>
-        </div>
-      </section>
-
-      <!-- experiencia laboral -->
-      <section id="experiencia" class="card exp-card rise-4">
-        <div class="exp-head">
-          <div class="exp-head-title">Experiencia laboral</div>
-          <div id="exp-range" class="exp-head-range"></div>
-        </div>
-        <div id="exp-list" style="display: flex; flex-direction: column; gap: 4px;"></div>
-      </section>
+        <div id="skills-groups" style="display: flex; flex-direction: column; gap: 13px;"></div>
+        <div id="contact-block" class="contact-block"></div>
+      </aside>
     </div>
 
-    <!-- columna derecha: skills -->
-    <aside id="skills" class="card skills-card rise-2">
-      <div class="skills-head">
-        <div class="card-title">Skills &amp; software</div>
-        <div id="skills-count" class="skills-count"></div>
+    <!-- educación + certificaciones (ancho completo) -->
+    <section id="educacion" class="edu-grid rise-3">
+      <div class="card edu-card">
+        <div class="card-title">Educación</div>
+        <div id="edu-list" style="display: flex; flex-direction: column; gap: 12px;"></div>
       </div>
-      <div id="skills-groups" style="display: flex; flex-direction: column; gap: 13px;"></div>
-      <div id="contact-block" class="contact-block"></div>
-    </aside>
+      <div class="card cert-card">
+        <div class="card-title">Certificaciones</div>
+        <div id="cert-list" class="cert-list"></div>
+      </div>
+    </section>
+
+    <!-- experiencia laboral (ancho completo) -->
+    <section id="experiencia" class="card exp-card rise-4">
+      <div class="exp-head">
+        <div class="exp-head-title">Experiencia laboral</div>
+        <div id="exp-range" class="exp-head-range"></div>
+      </div>
+      <div id="exp-list" style="display: flex; flex-direction: column; gap: 4px;"></div>
+    </section>
   </main>
 
   <footer id="footer" class="shell footer rise-5"></footer>

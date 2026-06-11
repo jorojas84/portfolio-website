@@ -8,14 +8,27 @@ Sitio estático de una sola página (sin frameworks ni build), listo para desple
 
 | Qué quieres cambiar | Dónde en `data.js` |
 |---|---|
-| Nombre, profesión, resumen, foto | `perfil` |
+| Fondo del banner y patrón de puntos | `tema` |
+| Nombre, profesión, resumen, silueta | `perfil` |
 | Email, teléfono, ciudad, LinkedIn, GitHub, CV | `contacto` |
-| Las 4 cajas del banner | `stats` |
 | Proyectos (añadir/editar/quitar) | `proyectos` |
 | Educación | `educacion` |
 | Certificaciones | `certificaciones` |
 | Experiencia laboral | `experiencia` |
 | Skills y barras de nivel | `skills` |
+
+### Cambiar el fondo del banner
+
+En `data.js` → `tema.fondoBanner`. Hay varios valores de ejemplo comentados
+justo debajo (negro plano, carbón degradado, grafito); copia el que quieras o
+escribe tu propio CSS de `background`. Ajusta `patronColor` (puntos) o ponlo en
+`""` para quitar el patrón.
+
+### Silueta del banner
+
+`perfil.foto` debe ser un **PNG con fondo transparente** (recorte de hombros/cara).
+Se ancla al borde inferior izquierdo y se desvanece para mezclarse con el fondo.
+Mientras esté `""` se muestra una silueta de marcador de posición.
 
 ### Añadir un proyecto
 

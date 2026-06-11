@@ -26,6 +26,15 @@
     return a;
   }
 
+  /* ---------- TEMA (fondo y patrón del banner) ---------- */
+  function applyTheme() {
+    const t = D.tema || {};
+    const root = document.documentElement.style;
+    if (t.fondoBanner) root.setProperty("--banner-bg", t.fondoBanner);
+    root.setProperty("--pattern-color", t.patronColor || "transparent");
+    if (t.patronTam) root.setProperty("--pattern-size", t.patronTam + "px");
+  }
+
   /* ---------- TOPBAR ---------- */
   function renderTopbar() {
     const c = D.contacto;
@@ -68,7 +77,14 @@
       img.alt = p.nombre;
       photo.appendChild(img);
     } else {
-      photo.appendChild(el("div", "photo-placeholder", "Tu foto"));
+      // silueta de marcador de posición (busto)
+      const ph = el("div", "photo-placeholder");
+      ph.innerHTML =
+        '<svg width="180" height="230" viewBox="0 0 180 230" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">' +
+        '<circle cx="90" cy="72" r="46"/>' +
+        '<path d="M10 230c0-46 36-78 80-78s80 32 80 78z"/>' +
+        "</svg>";
+      photo.appendChild(ph);
     }
 
     const badge = $("#hero-badge");
@@ -82,17 +98,6 @@
     $("#hero-name").textContent = p.nombre;
     $("#hero-role").textContent = p.profesion;
     $("#hero-summary").textContent = p.resumen;
-
-    const stats = $("#stats-grid");
-    D.stats.forEach((s) => {
-      const card = el("div", "stat-card");
-      const value = el("div", "stat-value", s.valor);
-      if (s.sufijo) value.appendChild(el("span", "suffix", s.sufijo));
-      card.appendChild(value);
-      card.appendChild(el("div", "stat-label", s.etiqueta));
-      if (s.nota) card.appendChild(el("div", "stat-note", s.nota));
-      stats.appendChild(card);
-    });
   }
 
   /* ---------- PROYECTOS ---------- */
@@ -270,6 +275,7 @@
     document.title = D.perfil.nombre + " · " + D.perfil.profesion;
   }
 
+  applyTheme();
   renderTopbar();
   renderHero();
   renderProjects();

@@ -5,6 +5,26 @@
 
 window.SITE_DATA = {
 
+  /* ---------- TEMA / APARIENCIA DEL BANNER ----------
+     Para cambiar el fondo del banner solo edita `fondoBanner`.
+     Hay varios ejemplos listos abajo: descomenta el que quieras
+     (deja activo SOLO uno) o escribe tu propio CSS de `background`. */
+  tema: {
+    // ▼ Fondo activo (negro con leve profundidad). Cambia esta línea:
+    fondoBanner:
+      "radial-gradient(120% 130% at 50% -10%, #23252E 0%, #141519 45%, #0A0A0C 100%)",
+
+    // Otras opciones (copia el valor de arriba por uno de estos):
+    // Negro plano:           "#0B0B0D"
+    // Carbón degradado:      "linear-gradient(160deg, #1C1D22 0%, #0B0B0D 100%)"
+    // Grafito diagonal:      "linear-gradient(135deg, #202228 0%, #0D0E11 60%, #060607 100%)"
+
+    // Patrón de puntos sobre el fondo. "" para quitarlo.
+    patronColor: "rgba(255,255,255,0.05)",
+    // Tamaño de la rejilla de puntos en píxeles.
+    patronTam: 20,
+  },
+
   /* ---------- PERFIL / BANNER ---------- */
   perfil: {
     nombre: "Jose Rojas",
@@ -14,8 +34,10 @@ window.SITE_DATA = {
       "5 años de experiencia internacional en entornos técnicos y analíticos. Actualmente cursando Ciencia de Datos, con base en Python, Excel y control de versiones. Bilingüe (ES/EN).",
     // Texto del badge de disponibilidad (déjalo "" para ocultarlo)
     disponibilidad: "Disponible para trabajo presencial o remoto",
-    // Foto del banner: pon tu imagen en assets/img/ y escribe la ruta aquí.
-    // Si la dejas "", se muestra un recuadro de marcador de posición.
+    // Silueta recortada (foto de hombros/cara) que se ancla al borde
+    // inferior izquierdo del banner. Usa un PNG con FONDO TRANSPARENTE
+    // para que se mezcle. Ej: "assets/img/silueta.png".
+    // Si la dejas "", se muestra una silueta de marcador de posición.
     foto: "",
   },
 
@@ -31,14 +53,6 @@ window.SITE_DATA = {
     // Si la dejas "", el botón no se muestra.
     cv: "",
   },
-
-  /* ---------- CAJAS DE HIGHLIGHTS (grilla 2×2 del banner) ---------- */
-  stats: [
-    { valor: "6",   sufijo: "",  etiqueta: "Proyectos completados",   nota: "↑ 2 este trimestre" },
-    { valor: "4",   sufijo: "",  etiqueta: "Certificaciones",         nota: "Google · Microsoft" },
-    { valor: "8",   sufijo: "",  etiqueta: "Herramientas que manejo", nota: "SQL · Python · BI" },
-    { valor: "520", sufijo: "h", etiqueta: "Horas de práctica",       nota: "↑ desde 2025" },
-  ],
 
   /* ---------- PROYECTOS ----------
      Para añadir un proyecto, copia un bloque { ... } y pégalo al final.
@@ -86,6 +100,19 @@ window.SITE_DATA = {
       links: [
         { texto: "Ver caso", url: "#" },
         { texto: "Notebook", url: "#" },
+      ],
+    },
+    {
+      destacado: true,
+      badge: "XLS",
+      categoria: "Reporte",
+      titulo: "Reporte mensual automatizado",
+      descripcion:
+        "Plantilla en Excel con tablas dinámicas que resume ventas e indicadores clave; reduce el cierre mensual de horas a minutos.",
+      imagen: "",
+      links: [
+        { texto: "Ver caso", url: "#" },
+        { texto: "Plantilla", url: "#" },
       ],
     },
   ],
