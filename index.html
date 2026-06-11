@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio · Analista de Datos</title>
+  <meta name="description" content="Portafolio de análisis de datos: proyectos, certificaciones y skills.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ BANNER (contacto + hero) ============ -->
+  <header id="resumen" class="shell banner rise">
+    <div class="topbar">
+      <div id="topbar-social" class="topbar-social"></div>
+      <div id="topbar-contact" class="topbar-contact"></div>
+    </div>
+
+    <div class="hero">
+      <div id="hero-photo" class="hero-photo"></div>
+      <div class="hero-text">
+        <div id="hero-badge" class="badge-available"></div>
+        <div>
+          <div id="hero-name" class="hero-name"></div>
+          <div id="hero-role" class="hero-role"></div>
+        </div>
+        <div id="hero-summary" class="hero-summary"></div>
+      </div>
+      <div id="stats-grid" class="stats-grid"></div>
+    </div>
+  </header>
+
+  <!-- ============ BODY GRID ============ -->
+  <main class="shell body-grid">
+
+    <!-- columna izquierda -->
+    <div class="col-left">
+
+      <!-- proyectos -->
+      <section id="proyectos" class="card rise-1">
+        <div class="projects-head">
+          <div class="projects-head-left">
+            <div class="card-title">Proyectos</div>
+            <div id="projects-count" class="count-chip"></div>
+          </div>
+          <button id="projects-see-all" class="see-all" type="button">Ver todos <span class="chev">›</span></button>
+        </div>
+        <div id="projects-grid" class="projects-grid"></div>
+      </section>
+
+      <!-- educación + certificaciones -->
+      <section id="educacion" class="edu-grid rise-3">
+        <div class="card edu-card">
+          <div class="card-title">Educación</div>
+          <div id="edu-list" style="display: flex; flex-direction: column; gap: 12px;"></div>
+        </div>
+        <div class="card cert-card">
+          <div class="card-title">Certificaciones</div>
+          <div id="cert-list" class="cert-list"></div>
+        </div>
+      </section>
+
+      <!-- experiencia laboral -->
+      <section id="experiencia" class="card exp-card rise-4">
+        <div class="exp-head">
+          <div class="exp-head-title">Experiencia laboral</div>
+          <div id="exp-range" class="exp-head-range"></div>
+        </div>
+        <div id="exp-list" style="display: flex; flex-direction: column; gap: 4px;"></div>
+      </section>
+    </div>
+
+    <!-- columna derecha: skills -->
+    <aside id="skills" class="card skills-card rise-2">
+      <div class="skills-head">
+        <div class="card-title">Skills &amp; software</div>
+        <div id="skills-count" class="skills-count"></div>
+      </div>
+      <div id="skills-groups" style="display: flex; flex-direction: column; gap: 13px;"></div>
+      <div id="contact-block" class="contact-block"></div>
+    </aside>
+  </main>
+
+  <footer id="footer" class="shell footer rise-5"></footer>
+
+  <script src="data.js"></script>
+  <script src="js/render.js"></script>
+</body>
+</html>
