@@ -8,12 +8,12 @@ window.SITE_DATA = {
   /* ---------- PERFIL / BANNER ---------- */
   perfil: {
     nombre: "Jose Miguel Rojas",
-    profesion: "Analista de Datos",
+    profesion: "Estudiante de Ciencia de Datos y Diseñador Industrial",
     // Párrafo breve (2 líneas aprox.)
     resumen:
       "Base sólida en SQL, Python y Power BI. Aprendo construyendo: cada proyecto de este portafolio resuelve una pregunta real con datos reales.",
     // Texto del badge de disponibilidad (déjalo "" para ocultarlo)
-    disponibilidad: "Disponible · buscando mi primer rol en datos",
+    disponibilidad: "Disponible para trabajo presencial o remoto",
     // Foto del banner: pon tu imagen en assets/img/ y escribe la ruta aquí.
     // Si la dejas "", se muestra un recuadro de marcador de posición.
     foto: "",
@@ -22,10 +22,10 @@ window.SITE_DATA = {
   /* ---------- CONTACTO Y REDES ---------- */
   contacto: {
     email: "jocmiguel2010@gmail.com",
-    telefono: "+00 000 000 000",
-    ciudad: "Ciudad, País",
-    linkedin: "https://www.linkedin.com/in/tu-perfil",
-    github: "https://github.com/tu-usuario",
+    telefono: "+57-318-103-8888",
+    ciudad: "Colombia",
+    linkedin: "https://www.linkedin.com/in/jr97/",
+    github: "https://github.com/jorojas84",
     tableau: "", // link a Tableau Public; "" para ocultarlo
     // Ruta del CV en PDF (súbelo a assets/, p. ej. "assets/cv.pdf").
     // Si la dejas "", el botón no se muestra.
