@@ -12,7 +12,7 @@ window.SITE_DATA = {
   tema: {
     // ▼ Fondo activo (negro con leve profundidad). Cambia esta línea:
     fondoBanner:
-      "radial-gradient(120% 130% at 50% -10%, #23252E 0%, #141519 45%, #0A0A0C 100%)",
+      "linear-gradient(160deg, #1C1D22 0%, #0B0B0D 100%)",
 
     // Otras opciones (copia el valor de arriba por uno de estos):
     // Negro plano:           "#0B0B0D"

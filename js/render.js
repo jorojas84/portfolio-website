@@ -26,6 +26,23 @@
     return a;
   }
 
+  // Iconos de redes (usan currentColor para adaptarse al fondo)
+  const SOCIAL_ICONS = {
+    linkedin:
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>',
+    github:
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.6-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>',
+  };
+
+  // Botón de red social: icon = "linkedin"|"github", className aplica estilo
+  function socialButton(href, icon, title, className) {
+    const a = link(href, className);
+    a.title = title;
+    a.setAttribute("aria-label", title);
+    a.innerHTML = SOCIAL_ICONS[icon];
+    return a;
+  }
+
   /* ---------- TEMA (fondo y patrón del banner) ---------- */
   function applyTheme() {
     const t = D.tema || {};
@@ -40,25 +57,8 @@
     const c = D.contacto;
     const social = $("#topbar-social");
 
-    const icons = {
-      linkedin:
-        '<svg width="15" height="15" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.16V23H8V8z"/></svg>',
-      github:
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.6-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>',
-    };
-
-    if (c.linkedin) {
-      const a = link(c.linkedin, "social-btn");
-      a.title = "LinkedIn";
-      a.innerHTML = icons.linkedin;
-      social.appendChild(a);
-    }
-    if (c.github) {
-      const a = link(c.github, "social-btn");
-      a.title = "GitHub";
-      a.innerHTML = icons.github;
-      social.appendChild(a);
-    }
+    if (c.linkedin) social.appendChild(socialButton(c.linkedin, "linkedin", "LinkedIn", "social-btn"));
+    if (c.github) social.appendChild(socialButton(c.github, "github", "GitHub", "social-btn"));
 
     const contact = $("#topbar-contact");
     if (c.email) contact.appendChild(link("mailto:" + c.email, "contact-pill", c.email));
@@ -243,30 +243,48 @@
     const c = D.contacto;
     const cont = $("#contact-block");
 
+    // una sola fila compacta: Contáctame (+ CV) + logos de redes
+    const actions = el("div", "cta-actions");
     if (c.email) {
-      cont.appendChild(link("mailto:" + c.email, "btn-big btn-dark", "Contáctame"));
+      actions.appendChild(link("mailto:" + c.email, "btn-big btn-dark", "Contáctame"));
     }
     if (c.cv) {
-      const a = link(c.cv, "btn-big btn-light", "Descargar CV en PDF");
+      const a = link(c.cv, "btn-big btn-light", "Descargar CV");
       a.removeAttribute("target");
       a.download = "";
-      cont.appendChild(a);
+      actions.appendChild(a);
+    }
+    if (c.linkedin) actions.appendChild(socialButton(c.linkedin, "linkedin", "LinkedIn", "social-btn-dark"));
+    if (c.github) actions.appendChild(socialButton(c.github, "github", "GitHub", "social-btn-dark"));
+    if (c.tableau) {
+      const t = link(c.tableau, "social-btn-dark");
+      t.title = "Tableau Public";
+      t.setAttribute("aria-label", "Tableau Public");
+      t.textContent = "Tb";
+      actions.appendChild(t);
     }
 
-    const links = [
-      { texto: "LinkedIn", url: c.linkedin },
-      { texto: "GitHub", url: c.github },
-      { texto: "Tableau Public", url: c.tableau },
-    ].filter((l) => l.url);
+    cont.appendChild(actions);
+  }
 
-    if (links.length) {
-      const row = el("div", "contact-links");
-      links.forEach((l, i) => {
-        if (i > 0) row.appendChild(el("span", "sep", "·"));
-        row.appendChild(link(l.url, "", l.texto));
-      });
+  /* ---------- INFO DE CONTACTO (lado derecho del CTA) ---------- */
+  function renderContactInfo() {
+    const c = D.contacto;
+    const cont = $("#contact-info");
+    const rows = [
+      { label: "Email", value: c.email, href: "mailto:" + c.email },
+      { label: "Teléfono", value: c.telefono },
+      { label: "Ubicación", value: c.ciudad },
+    ].filter((r) => r.value);
+
+    rows.forEach((r) => {
+      const row = el("div", "info-row");
+      row.appendChild(el("span", "info-label", r.label));
+      row.appendChild(
+        r.href ? link(r.href, "info-value", r.value) : el("span", "info-value", r.value)
+      );
       cont.appendChild(row);
-    }
+    });
   }
 
   /* ---------- FOOTER + <title> ---------- */
@@ -283,5 +301,6 @@
   renderExperience();
   renderSkills();
   renderContactBlock();
+  renderContactInfo();
   renderFooter();
 })();
