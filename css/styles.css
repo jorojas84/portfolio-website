@@ -28,6 +28,9 @@
   --banner-bg: radial-gradient(120% 130% at 50% -10%, #23252E 0%, #141519 45%, #0A0A0C 100%);
   --pattern-color: rgba(255, 255, 255, 0.05);
   --pattern-size: 20px;
+
+  /* ancho de la foto del banner en escritorio (lo sobreescribe data.js) */
+  --foto-ancho: 280px;
 }
 
 * { box-sizing: border-box; }
@@ -85,17 +88,16 @@ a { transition: all 0.2s; }
   pointer-events: none;
 }
 
-/* barra superior: redes + contacto */
+/* barra superior: contacto arriba, iconos de redes debajo */
 .topbar {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 10px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
   margin-bottom: 24px;
-  flex-wrap: wrap;
 }
 
 .topbar-social { display: flex; align-items: center; gap: 8px; }
@@ -140,7 +142,7 @@ a { transition: all 0.2s; }
   align-items: center;
   gap: 8px;
   font-size: 12.5px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .contact-pill {
@@ -154,39 +156,34 @@ a { transition: all 0.2s; }
 
 a.contact-pill:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.30); }
 
-/* hero: silueta (anclada abajo) + texto */
+/* hero: foto (anclada abajo) + texto.
+   El ancho de la foto se controla con --foto-ancho (lo fija data.js). */
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: var(--foto-ancho) 1fr;
   gap: 32px;
   align-items: center;
   min-height: 230px;
 }
 
-/* la silueta se ancla al borde inferior del banner y "sangra" hasta él */
+/* la foto se ancla al borde inferior del banner y "sangra" hasta él */
 .hero-photo {
   align-self: end;
-  height: 250px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
 .hero-photo img {
-  height: 100%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
   object-position: bottom center;
   display: block;
-  /* desvanecido inferior para que se mezcle con el fondo */
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 16%);
-  mask-image: linear-gradient(to top, transparent 0%, #000 16%);
 }
 
 .hero-photo .photo-placeholder {
-  height: 100%;
+  height: 250px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -661,6 +658,8 @@ a.info-value:hover { color: var(--accent); }
   .banner { padding-bottom: 18px; }
   .topbar {
     order: 2;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     border-bottom: none;
     border-top: 1px solid rgba(255, 255, 255, 0.09);
@@ -669,11 +668,19 @@ a.info-value:hover { color: var(--accent); }
     margin-bottom: 0;
     margin-top: 20px;
   }
+  .topbar-contact { flex-wrap: wrap; justify-content: center; }
 
-  /* hero: foto centrada arriba + texto centrado debajo */
-  .hero { order: 1; grid-template-columns: 1fr; min-height: 0; text-align: center; gap: 8px; }
-  .hero-photo { height: 210px; align-self: center; justify-content: center; }
-  .hero-photo img { height: 100%; width: auto; max-width: 100%; }
+  /* hero: foto en círculo centrada arriba + texto centrado debajo */
+  .hero { order: 1; grid-template-columns: 1fr; min-height: 0; text-align: center; gap: 10px; }
+  .hero-photo { align-self: center; justify-content: center; }
+  .hero-photo img {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
   .hero-text { align-items: center; text-align: center; max-width: 100%; padding: 6px 0 14px; }
   .badge-available { align-self: center; }
   .hero-name { font-size: 30px; }

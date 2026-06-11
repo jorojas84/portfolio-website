@@ -50,6 +50,8 @@
     if (t.fondoBanner) root.setProperty("--banner-bg", t.fondoBanner);
     root.setProperty("--pattern-color", t.patronColor || "transparent");
     if (t.patronTam) root.setProperty("--pattern-size", t.patronTam + "px");
+    // ancho de la foto del banner en escritorio
+    if (D.perfil && D.perfil.fotoAncho) root.setProperty("--foto-ancho", D.perfil.fotoAncho + "px");
   }
 
   /* ---------- TOPBAR ---------- */
@@ -63,7 +65,7 @@
     const contact = $("#topbar-contact");
     if (c.email) contact.appendChild(link("mailto:" + c.email, "contact-pill", c.email));
     if (c.telefono) contact.appendChild(el("div", "contact-pill", c.telefono));
-    if (c.ciudad) contact.appendChild(el("div", "contact-pill", c.ciudad));
+    // (la ciudad va solo en el bloque de contacto del final, no en la barra)
   }
 
   /* ---------- HERO ---------- */

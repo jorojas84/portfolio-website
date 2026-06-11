@@ -39,6 +39,9 @@ window.SITE_DATA = {
     // para que se mezcle. Ej: "assets/img/silueta.png".
     // Si la dejas "", se muestra una silueta de marcador de posición.
     foto: "assets/img/1.png",
+    // Tamaño de la foto en ESCRITORIO (ancho en px). Súbelo para que se vea
+    // más grande, bájalo para más pequeña. En móvil sale en círculo (fijo).
+    fotoAncho: 300,
   },
 
   /* ---------- CONTACTO Y REDES ---------- */
