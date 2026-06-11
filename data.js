@@ -20,7 +20,7 @@ window.SITE_DATA = {
     // Grafito diagonal:      "linear-gradient(135deg, #202228 0%, #0D0E11 60%, #060607 100%)"
 
     // Patrón de puntos sobre el fondo. "" para quitarlo.
-    patronColor: "rgba(255,255,255,0.05)",
+    patronColor: "",
     // Tamaño de la rejilla de puntos en píxeles.
     patronTam: 20,
   },
