@@ -214,8 +214,7 @@ a.contact-pill:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.30); 
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: var(--foto-ancho) auto;
-  justify-content: center;
+  grid-template-columns: var(--foto-ancho) 1fr;
   gap: 32px;
   align-items: center;
   min-height: 230px;
@@ -391,6 +390,7 @@ a.contact-pill:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.30); 
 }
 
 .project-card {
+  background: rgba(255, 255, 255, 0.45);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 14px;
