@@ -141,7 +141,8 @@
     const featured = D.proyectos.filter((p) => p.destacado);
     const rest = D.proyectos.filter((p) => !p.destacado);
 
-    $("#projects-count").textContent = featured.length + " destacados";
+    const countChip = $("#projects-count");
+    if (countChip) countChip.remove(); // sin conteo de destacados
     featured.forEach((p) => grid.appendChild(projectCard(p)));
 
     const seeAll = $("#projects-see-all");
@@ -226,10 +227,10 @@
         const row = el("div", "skill-row");
         const icon = el("div", "skill-icon", s.sigla);
         if (s.color) {
-          // tinte suave del color para fondo/borde + texto a color pleno
+          // tinte del color para fondo/borde + texto a color pleno
           icon.style.color = s.color;
-          icon.style.background = s.color + "1A"; // ~10% alpha
-          icon.style.borderColor = s.color + "40"; // ~25% alpha
+          icon.style.background = s.color + "26"; // ~15% alpha
+          icon.style.borderColor = s.color + "59"; // ~35% alpha
         }
         row.appendChild(icon);
         const info = el("div", "skill-info");
