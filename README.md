@@ -17,12 +17,19 @@ Sitio estático de una sola página (sin frameworks ni build), listo para desple
 | Experiencia laboral | `experiencia` |
 | Skills y barras de nivel | `skills` |
 
-### Cambiar el fondo del banner
+### Estilo liquid glass (translúcido)
 
-En `data.js` → `tema.fondoBanner`. Hay varios valores de ejemplo comentados
-justo debajo (negro plano, carbón degradado, grafito); copia el que quieras o
-escribe tu propio CSS de `background`. Ajusta `patronColor` (puntos) o ponlo en
-`""` para quitar el patrón.
+El sitio usa tarjetas de vidrio (`backdrop-filter`) sobre un fondo con color.
+Todo se controla en `data.js` → `tema`:
+
+- **`fondoImagen`** — pon la ruta de tu propia imagen (ej. `"assets/img/fondo.jpg"`)
+  y se usa como fondo de página detrás del vidrio.
+- **`fondoPagina`** — si no hay imagen, se usa este degradado abstracto (CSS).
+  Hay variantes listas comentadas (azul hielo, atardecer); cuanto más color
+  tenga el fondo, más se nota el efecto translúcido.
+- **`fondoBanner`** — vidrio oscuro del banner. Usa `rgba(...)` para mantener
+  la translucidez; sube el alpha (0.9) si lo quieres más opaco.
+- **`patronColor` / `patronTam`** — patrón de puntos del banner (`""` lo quita).
 
 ### Silueta del banner
 

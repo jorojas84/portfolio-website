@@ -10,16 +10,25 @@ window.SITE_DATA = {
      Hay varios ejemplos listos abajo: descomenta el que quieras
      (deja activo SOLO uno) o escribe tu propio CSS de `background`. */
   tema: {
-    // ▼ Fondo activo (negro con leve profundidad). Cambia esta línea:
+    /* ===== FONDO DE PÁGINA (detrás de las tarjetas de vidrio) =====
+       El efecto translúcido necesita color/contraste detrás.
+       Opción A — tu propia imagen: pon la ruta y listo.
+         fondoImagen: "assets/img/fondo.jpg",
+       Opción B — degradado abstracto (se usa si fondoImagen está ""). */
+    fondoImagen: "",
+    fondoPagina:
+      "radial-gradient(55% 70% at 12% 8%, #BFD3F2 0%, rgba(191,211,242,0) 60%), radial-gradient(45% 60% at 88% 14%, #F2D7C4 0%, rgba(242,215,196,0) 60%), radial-gradient(60% 75% at 78% 88%, #C4E4D4 0%, rgba(196,228,212,0) 55%), radial-gradient(50% 65% at 14% 86%, #DCCDEF 0%, rgba(220,205,239,0) 60%), #E9ECF2",
+
+    // Otros fondos de página listos para copiar en fondoPagina:
+    // Azul hielo:  "radial-gradient(70% 90% at 50% 0%, #C9DDF5 0%, rgba(201,221,245,0) 60%), #E8EEF6"
+    // Atardecer:   "radial-gradient(60% 80% at 20% 15%, #F4CDB8 0%, rgba(244,205,184,0) 60%), radial-gradient(55% 70% at 85% 80%, #E3C2DF 0%, rgba(227,194,223,0) 55%), #F0EAEA"
+
+    /* ===== BANNER (vidrio oscuro translúcido) =====
+       Usa rgba(...) para que se vea el fondo a través del vidrio. */
     fondoBanner:
-      "linear-gradient(160deg, #1C1D22 0%, #0B0B0D 100%)",
+      "linear-gradient(160deg, rgba(24,25,31,0.78) 0%, rgba(10,10,13,0.84) 100%)",
 
-    // Otras opciones (copia el valor de arriba por uno de estos):
-    // Negro plano:           "#0B0B0D"
-    // Carbón degradado:      "linear-gradient(160deg, #1C1D22 0%, #0B0B0D 100%)"
-    // Grafito diagonal:      "linear-gradient(135deg, #202228 0%, #0D0E11 60%, #060607 100%)"
-
-    // Patrón de puntos sobre el fondo. "" para quitarlo.
+    // Patrón de puntos sobre el banner. "" para quitarlo.
     patronColor: "",
     // Tamaño de la rejilla de puntos en píxeles.
     patronTam: 20,

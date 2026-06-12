@@ -47,6 +47,12 @@
   function applyTheme() {
     const t = D.tema || {};
     const root = document.documentElement.style;
+    // fondo de página: imagen propia o degradado abstracto
+    if (t.fondoImagen) {
+      root.setProperty("--page-bg", 'url("' + t.fondoImagen + '") center / cover no-repeat');
+    } else if (t.fondoPagina) {
+      root.setProperty("--page-bg", t.fondoPagina);
+    }
     if (t.fondoBanner) root.setProperty("--banner-bg", t.fondoBanner);
     root.setProperty("--pattern-color", t.patronColor || "transparent");
     if (t.patronTam) root.setProperty("--pattern-size", t.patronTam + "px");
