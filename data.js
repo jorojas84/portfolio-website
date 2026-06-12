@@ -73,7 +73,7 @@ window.SITE_DATA = {
       titulo: "Análisis de ventas retail",
       descripcion:
         "Limpieza y análisis de 50.000 registros de ventas; identifiqué los 3 productos con mayor margen por región.",
-      imagen: "",
+      imagen: "assets/img/proyecto-retail.svg",
       links: [
         { texto: "Ver caso", url: "#" },
         { texto: "GitHub", url: "#" },
@@ -86,7 +86,7 @@ window.SITE_DATA = {
       titulo: "Dashboard de churn de clientes",
       descripcion:
         "Dashboard interactivo en Power BI: el 62% de las bajas ocurría en los primeros 90 días de suscripción.",
-      imagen: "",
+      imagen: "assets/img/proyecto-churn.svg",
       links: [
         { texto: "Ver caso", url: "#" },
         { texto: "Demo", url: "#" },
@@ -99,7 +99,7 @@ window.SITE_DATA = {
       titulo: "Exploración de precios Airbnb",
       descripcion:
         "EDA con pandas y matplotlib sobre 18.000 anuncios: la distancia al centro explica el 40% de la variación de precio.",
-      imagen: "",
+      imagen: "assets/img/proyecto-airbnb.svg",
       links: [
         { texto: "Ver caso", url: "#" },
         { texto: "Notebook", url: "#" },
@@ -112,7 +112,7 @@ window.SITE_DATA = {
       titulo: "Reporte mensual automatizado",
       descripcion:
         "Plantilla en Excel con tablas dinámicas que resume ventas e indicadores clave; reduce el cierre mensual de horas a minutos.",
-      imagen: "",
+      imagen: "assets/img/proyecto-reporte.svg",
       links: [
         { texto: "Ver caso", url: "#" },
         { texto: "Plantilla", url: "#" },

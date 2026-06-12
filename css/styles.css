@@ -88,13 +88,13 @@ a { transition: all 0.2s; }
   pointer-events: none;
 }
 
-/* barra superior: contacto arriba, iconos de redes debajo */
+/* barra superior: iconos de redes a la izquierda, contacto a la derecha */
 .topbar {
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
   margin-bottom: 24px;
