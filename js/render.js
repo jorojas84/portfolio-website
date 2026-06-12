@@ -54,6 +54,12 @@
       root.setProperty("--page-bg", t.fondoPagina);
     }
     if (t.fondoBanner) root.setProperty("--banner-bg", t.fondoBanner);
+    // vidrio: opacidad, blur y brillo "liquid" de las tarjetas
+    if (typeof t.opacidadTarjetas === "number") {
+      root.setProperty("--glass-bg", "rgba(255,255,255," + t.opacidadTarjetas + ")");
+    }
+    if (typeof t.blur === "number") root.setProperty("--glass-blur", t.blur + "px");
+    if (typeof t.brillo === "number") root.setProperty("--glass-sheen", t.brillo);
     root.setProperty("--pattern-color", t.patronColor || "transparent");
     if (t.patronTam) root.setProperty("--pattern-size", t.patronTam + "px");
     // ancho de la foto del banner en escritorio
@@ -132,14 +138,58 @@
     card.appendChild(el("div", "project-title", p.titulo));
     card.appendChild(el("div", "project-desc", p.descripcion));
 
-    if (p.links && p.links.length) {
-      const actions = el("div", "project-actions");
-      p.links.forEach((l, i) => {
-        actions.appendChild(link(l.url, "btn " + (i === 0 ? "btn-dark" : "btn-light"), l.texto));
-      });
-      card.appendChild(actions);
-    }
+    const actions = el("div", "project-actions");
+    const btn = el("button", "btn btn-dark", "Ver proyecto");
+    btn.type = "button";
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openProjectModal(p);
+    });
+    actions.appendChild(btn);
+    card.appendChild(actions);
     return card;
+  }
+
+  /* ---------- POPUP DE PROYECTO (PDF) ---------- */
+  function openProjectModal(p) {
+    const modal = $("#pdf-modal");
+    $("#pdf-modal-title").textContent = p.titulo;
+    const body = $("#pdf-modal-body");
+    body.innerHTML = "";
+    if (p.pdf) {
+      const frame = document.createElement("iframe");
+      frame.src = p.pdf;
+      frame.className = "pdf-frame";
+      frame.title = p.titulo;
+      body.appendChild(frame);
+    } else {
+      const empty = el("div", "pdf-empty");
+      empty.appendChild(el("div", "pdf-empty-title", "Documento en preparación"));
+      empty.appendChild(
+        el("div", "pdf-empty-text", "Pronto encontrarás aquí el caso completo de este proyecto.")
+      );
+      body.appendChild(empty);
+    }
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeProjectModal() {
+    const modal = $("#pdf-modal");
+    modal.classList.remove("open");
+    $("#pdf-modal-body").innerHTML = "";
+    document.body.style.overflow = "";
+  }
+
+  function setupModal() {
+    const modal = $("#pdf-modal");
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeProjectModal();
+    });
+    $("#pdf-modal-close").addEventListener("click", closeProjectModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeProjectModal();
+    });
   }
 
   function renderProjects() {
@@ -310,6 +360,7 @@
   }
 
   applyTheme();
+  setupModal();
   renderTopbar();
   renderHero();
   renderProjects();

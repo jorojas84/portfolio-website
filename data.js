@@ -17,14 +17,24 @@ window.SITE_DATA = {
        Opción B — degradado abstracto (se usa si fondoImagen está ""). */
     fondoImagen: "",
     fondoPagina:
-      "radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127,168,232,0) 62%), radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240,174,126,0) 60%), radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126,203,166,0) 58%), radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182,138,224,0) 60%), radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232,184,200,0) 55%), #D8DEE9",
+      "radial-gradient(70% 90% at 50% 0%, #8FB8EC 0%, rgba(143,184,236,0) 65%), radial-gradient(60% 80% at 85% 85%, #A8CBE8 0%, rgba(168,203,232,0) 60%), #DCE6F2"
+      //"radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127,168,232,0) 62%), radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240,174,126,0) 60%), radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126,203,166,0) 58%), radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182,138,224,0) 60%), radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232,184,200,0) 55%), #D8DEE9",
 
     // Otros fondos de página listos para copiar en fondoPagina:
     // Azul hielo:  "radial-gradient(70% 90% at 50% 0%, #8FB8EC 0%, rgba(143,184,236,0) 65%), radial-gradient(60% 80% at 85% 85%, #A8CBE8 0%, rgba(168,203,232,0) 60%), #DCE6F2"
     // Atardecer:   "radial-gradient(60% 80% at 20% 15%, #F2A988 0%, rgba(242,169,136,0) 62%), radial-gradient(55% 70% at 85% 80%, #D898D0 0%, rgba(216,152,208,0) 58%), #EDE2DF"
 
+    /* ===== VIDRIO (tarjetas claras) =====
+       opacidadTarjetas: 0 (transparente) a 1 (sólido blanco).
+       blur: desenfoque en px del cristal.
+       brillo: intensidad del reflejo "liquid" (0 lo apaga, 1 máximo). */
+    opacidadTarjetas: 0.42,
+    blur: 22,
+    brillo: 0.5,
+
     /* ===== BANNER (vidrio oscuro translúcido) =====
-       Usa rgba(...) para que se vea el fondo a través del vidrio. */
+       Usa rgba(...) para que se vea el fondo a través del vidrio.
+       Sube los alphas (0.9) si lo quieres más opaco. */
     fondoBanner:
       "linear-gradient(160deg, rgba(24,25,31,0.62) 0%, rgba(10,10,13,0.74) 100%)",
 
@@ -73,7 +83,8 @@ window.SITE_DATA = {
      - imagen: ruta a la vista previa (p. ej. "assets/img/proyecto1.png");
        "" muestra un recuadro de marcador de posición.
      - badge: sigla corta (SQL, PBI, PY...) que sale en el cuadrito.
-     - links: cada botón del proyecto; el primero se pinta oscuro.       */
+     - pdf: ruta al PDF con la info del proyecto (p. ej. "assets/docs/p1.pdf").
+       El botón "Ver proyecto" abre un popup con ese PDF.                */
   proyectos: [
     {
       destacado: true,
@@ -83,10 +94,7 @@ window.SITE_DATA = {
       descripcion:
         "Limpieza y análisis de 50.000 registros de ventas; identifiqué los 3 productos con mayor margen por región.",
       imagen: "assets/img/proyecto-retail.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "GitHub", url: "#" },
-      ],
+      pdf: "",
     },
     {
       destacado: true,
@@ -96,10 +104,7 @@ window.SITE_DATA = {
       descripcion:
         "Dashboard interactivo en Power BI: el 62% de las bajas ocurría en los primeros 90 días de suscripción.",
       imagen: "assets/img/proyecto-churn.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "Demo", url: "#" },
-      ],
+      pdf: "",
     },
     {
       destacado: true,
@@ -109,10 +114,7 @@ window.SITE_DATA = {
       descripcion:
         "EDA con pandas y matplotlib sobre 18.000 anuncios: la distancia al centro explica el 40% de la variación de precio.",
       imagen: "assets/img/proyecto-airbnb.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "Notebook", url: "#" },
-      ],
+      pdf: "",
     },
     {
       destacado: true,
@@ -122,10 +124,7 @@ window.SITE_DATA = {
       descripcion:
         "Plantilla en Excel con tablas dinámicas que resume ventas e indicadores clave; reduce el cierre mensual de horas a minutos.",
       imagen: "assets/img/proyecto-reporte.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "Plantilla", url: "#" },
-      ],
+      pdf: "",
     },
   ],
 
