@@ -156,6 +156,10 @@
       openProjectModal(p);
     });
     actions.appendChild(btn);
+    // segundo botón opcional: enlace externo (GitHub, demo, notebook...)
+    if (p.link && p.link.url) {
+      actions.appendChild(link(p.link.url, "btn btn-light", p.link.texto || "Ver más"));
+    }
     card.appendChild(actions);
     return card;
   }

@@ -89,7 +89,12 @@ window.SITE_DATA = {
      - imagen: ruta a la vista previa (p. ej. "assets/img/proyecto1.png");
        "" muestra un recuadro de marcador de posición.
      - badge: sigla corta (SQL, PBI, PY...) que sale en el cuadrito.
-     - links: cada botón del proyecto; el primero se pinta oscuro.       */
+     - pdf: documento del caso que abre el botón "Ver proyecto" en el
+       visor. Déjalo "" para mostrar "Documento en preparación".
+       (assets/pdf/proyecto-demo.pdf es un PDF falso de prueba.)
+     - link: (opcional) segundo botón con enlace externo. Borra la
+       línea para ocultarlo. Ej:
+         link: { texto: "GitHub", url: "https://github.com/..." },      */
   proyectos: [
     {
       destacado: true,
@@ -99,10 +104,8 @@ window.SITE_DATA = {
       descripcion:
         "Limpieza y análisis de 50.000 registros de ventas; identifiqué los 3 productos con mayor margen por región.",
       imagen: "assets/img/proyecto-retail.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "GitHub", url: "#" },
-      ],
+      pdf: "assets/pdf/proyecto-demo.pdf",
+      link: { texto: "GitHub", url: "https://github.com/jorojas84" },
     },
     {
       destacado: true,
@@ -112,10 +115,8 @@ window.SITE_DATA = {
       descripcion:
         "Dashboard interactivo en Power BI: el 62% de las bajas ocurría en los primeros 90 días de suscripción.",
       imagen: "assets/img/proyecto-churn.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "Demo", url: "#" },
-      ],
+      pdf: "assets/pdf/proyecto-demo.pdf",
+      link: { texto: "Demo", url: "https://github.com/jorojas84" },
     },
     {
       destacado: true,
@@ -125,10 +126,7 @@ window.SITE_DATA = {
       descripcion:
         "EDA con pandas y matplotlib sobre 18.000 anuncios: la distancia al centro explica el 40% de la variación de precio.",
       imagen: "assets/img/proyecto-airbnb.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "Notebook", url: "#" },
-      ],
+      pdf: "assets/pdf/proyecto-demo.pdf",
     },
     {
       destacado: true,
@@ -138,10 +136,7 @@ window.SITE_DATA = {
       descripcion:
         "Plantilla en Excel con tablas dinámicas que resume ventas e indicadores clave; reduce el cierre mensual de horas a minutos.",
       imagen: "assets/img/proyecto-reporte.svg",
-      links: [
-        { texto: "Ver caso", url: "#" },
-        { texto: "Plantilla", url: "#" },
-      ],
+      pdf: "assets/pdf/proyecto-demo.pdf",
     },
   ],
 
