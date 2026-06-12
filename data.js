@@ -35,14 +35,14 @@ window.SITE_DATA = {
        Independientes de las tarjetas de abajo.
        opacidadBanner: 0 (transparente) a 1 (negro sólido).
        blurBanner: desenfoque en px del cristal del banner. */
-    opacidadBanner: 0.85,
+    opacidadBanner: 0.5,
     blurBanner: 22,
 
     /* (Opcional) Si prefieres definir TÚ el gradiente exacto en vez de usar
        opacidadBanner, descomenta fondoBanner. Solo se usa si NO pones
        opacidadBanner arriba. */
     // fondoBanner:
-    //   "linear-gradient(160deg, rgba(18, 18, 18, 0.62) 0%, rgba(0, 0, 0, 0.74) 100%)",
+    //   "linear-gradient(160deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
 
     // Patrón de puntos sobre el banner. "" para quitarlo.
     patronColor: "",
