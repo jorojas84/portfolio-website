@@ -35,7 +35,7 @@ window.SITE_DATA = {
        Independientes de las tarjetas de abajo.
        opacidadBanner: 0 (transparente) a 1 (negro sólido).
        blurBanner: desenfoque en px del cristal del banner. */
-    opacidadBanner: 0.8,
+    opacidadBanner: 1,
     blurBanner: 22,
 
     /* (Opcional) Si prefieres definir TÚ el gradiente exacto en vez de usar
