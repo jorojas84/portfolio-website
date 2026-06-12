@@ -26,6 +26,7 @@
   /* Fondo y patrón del banner — los define data.js (tema) vía JS,
      pero dejamos valores por defecto por si data.js no carga. */
   --banner-bg: linear-gradient(160deg, rgba(24, 25, 31, 0.78) 0%, rgba(10, 10, 13, 0.84) 100%);
+  --banner-blur: 22px; /* desenfoque propio del banner (data.js: tema.blurBanner) */
   --pattern-color: rgba(255, 255, 255, 0.05);
   --pattern-size: 20px;
 
@@ -108,6 +109,8 @@ a { transition: all 0.2s; }
   position: relative;
   overflow: hidden;
   background: var(--banner-bg);
+  -webkit-backdrop-filter: blur(var(--banner-blur)) saturate(1.5);
+  backdrop-filter: blur(var(--banner-blur)) saturate(1.5);
   border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.10);
   display: flex;
@@ -211,7 +214,8 @@ a.contact-pill:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.30); 
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: var(--foto-ancho) 1fr;
+  grid-template-columns: var(--foto-ancho) auto;
+  justify-content: center;
   gap: 32px;
   align-items: center;
   min-height: 230px;
@@ -244,7 +248,8 @@ a.contact-pill:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, 0.30); 
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   max-width: 620px;
   padding: 12px 0 28px 0;
 }

@@ -53,7 +53,17 @@
     } else if (t.fondoPagina) {
       root.setProperty("--page-bg", t.fondoPagina);
     }
-    if (t.fondoBanner) root.setProperty("--banner-bg", t.fondoBanner);
+    // banner: opacidad y blur PROPIOS (independientes de las tarjetas)
+    if (typeof t.opacidadBanner === "number") {
+      root.setProperty(
+        "--banner-bg",
+        "linear-gradient(160deg, rgba(18,18,18," + t.opacidadBanner +
+          ") 0%, rgba(0,0,0," + Math.min(1, t.opacidadBanner + 0.12) + ") 100%)"
+      );
+    } else if (t.fondoBanner) {
+      root.setProperty("--banner-bg", t.fondoBanner);
+    }
+    if (typeof t.blurBanner === "number") root.setProperty("--banner-blur", t.blurBanner + "px");
     // vidrio: opacidad, blur y brillo "liquid" de las tarjetas
     if (typeof t.opacidadTarjetas === "number") {
       root.setProperty("--glass-bg", "rgba(255,255,255," + t.opacidadTarjetas + ")");
