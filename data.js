@@ -41,7 +41,7 @@ window.SITE_DATA = {
     foto: "assets/img/1.png",
     // Tamaño de la foto en ESCRITORIO (ancho en px). Súbelo para que se vea
     // más grande, bájalo para más pequeña. En móvil sale en círculo (fijo).
-    fotoAncho: 280,
+    fotoAncho: 250,
   },
 
   /* ---------- CONTACTO Y REDES ---------- */
