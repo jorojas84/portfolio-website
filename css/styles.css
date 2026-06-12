@@ -30,17 +30,18 @@
   --pattern-size: 20px;
 
   /* fondo de página detrás del vidrio (lo sobreescribe data.js) */
-  --page-bg: radial-gradient(55% 70% at 12% 8%, #BFD3F2 0%, rgba(191, 211, 242, 0) 60%),
-    radial-gradient(45% 60% at 88% 14%, #F2D7C4 0%, rgba(242, 215, 196, 0) 60%),
-    radial-gradient(60% 75% at 78% 88%, #C4E4D4 0%, rgba(196, 228, 212, 0) 55%),
-    radial-gradient(50% 65% at 14% 86%, #DCCDEF 0%, rgba(220, 205, 239, 0) 60%),
-    #E9ECF2;
+  --page-bg: radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127, 168, 232, 0) 62%),
+    radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240, 174, 126, 0) 60%),
+    radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126, 203, 166, 0) 58%),
+    radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182, 138, 224, 0) 60%),
+    radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232, 184, 200, 0) 55%),
+    #D8DEE9;
 
   /* superficie de vidrio (tarjetas claras) */
-  --glass-bg: rgba(255, 255, 255, 0.55);
-  --glass-border: rgba(255, 255, 255, 0.65);
-  --glass-blur: 26px;
-  --glass-shadow: 0 8px 32px rgba(25, 32, 56, 0.10);
+  --glass-bg: rgba(255, 255, 255, 0.42);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-blur: 22px;
+  --glass-shadow: 0 8px 32px rgba(25, 32, 56, 0.12);
 
   /* ancho de la foto del banner en escritorio (lo sobreescribe data.js) */
   --foto-ancho: 280px;
@@ -48,14 +49,21 @@
 
 * { box-sizing: border-box; }
 
+html {
+  background: #D8DEE9;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background: #E9ECF2;
 }
 
 /* capa de fondo fija detrás del vidrio (evita background-attachment: fixed,
-   que falla en iOS Safari) */
+   que falla en iOS Safari). El body debe quedar transparente para no taparla. */
+body {
+  background: transparent;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -70,7 +78,7 @@ body {
   font-family: 'Instrument Sans', sans-serif;
   color: var(--ink);
   min-height: 100vh;
-  padding: 12px;
+  padding: 22px;
 }
 
 a { transition: all 0.2s; }

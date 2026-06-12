@@ -17,16 +17,16 @@ window.SITE_DATA = {
        Opción B — degradado abstracto (se usa si fondoImagen está ""). */
     fondoImagen: "",
     fondoPagina:
-      "radial-gradient(55% 70% at 12% 8%, #BFD3F2 0%, rgba(191,211,242,0) 60%), radial-gradient(45% 60% at 88% 14%, #F2D7C4 0%, rgba(242,215,196,0) 60%), radial-gradient(60% 75% at 78% 88%, #C4E4D4 0%, rgba(196,228,212,0) 55%), radial-gradient(50% 65% at 14% 86%, #DCCDEF 0%, rgba(220,205,239,0) 60%), #E9ECF2",
+      "radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127,168,232,0) 62%), radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240,174,126,0) 60%), radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126,203,166,0) 58%), radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182,138,224,0) 60%), radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232,184,200,0) 55%), #D8DEE9",
 
     // Otros fondos de página listos para copiar en fondoPagina:
-    // Azul hielo:  "radial-gradient(70% 90% at 50% 0%, #C9DDF5 0%, rgba(201,221,245,0) 60%), #E8EEF6"
-    // Atardecer:   "radial-gradient(60% 80% at 20% 15%, #F4CDB8 0%, rgba(244,205,184,0) 60%), radial-gradient(55% 70% at 85% 80%, #E3C2DF 0%, rgba(227,194,223,0) 55%), #F0EAEA"
+    // Azul hielo:  "radial-gradient(70% 90% at 50% 0%, #8FB8EC 0%, rgba(143,184,236,0) 65%), radial-gradient(60% 80% at 85% 85%, #A8CBE8 0%, rgba(168,203,232,0) 60%), #DCE6F2"
+    // Atardecer:   "radial-gradient(60% 80% at 20% 15%, #F2A988 0%, rgba(242,169,136,0) 62%), radial-gradient(55% 70% at 85% 80%, #D898D0 0%, rgba(216,152,208,0) 58%), #EDE2DF"
 
     /* ===== BANNER (vidrio oscuro translúcido) =====
        Usa rgba(...) para que se vea el fondo a través del vidrio. */
     fondoBanner:
-      "linear-gradient(160deg, rgba(24,25,31,0.78) 0%, rgba(10,10,13,0.84) 100%)",
+      "linear-gradient(160deg, rgba(24,25,31,0.62) 0%, rgba(10,10,13,0.74) 100%)",
 
     // Patrón de puntos sobre el banner. "" para quitarlo.
     patronColor: "",
