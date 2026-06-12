@@ -27,15 +27,15 @@ window.SITE_DATA = {
        opacidadTarjetas: 0 (transparente) a 1 (sólido blanco).
        blur: desenfoque en px del cristal.
        brillo: intensidad del reflejo "liquid" (0 lo apaga, 1 máximo). */
-    opacidadTarjetas: 0.12,
+    opacidadTarjetas: 0,
     blur: 15,
-    brillo: 0.2,
+    brillo: 0,
 
     /* ===== BANNER (vidrio oscuro translúcido) =====
        Usa rgba(...) para que se vea el fondo a través del vidrio.
        Sube los alphas (0.9) si lo quieres más opaco. */
     fondoBanner:
-      "linear-gradient(160deg, rgba(24,25,31,0.62) 0%, rgba(0, 0, 0, 0.74) 100%)",
+      "linear-gradient(160deg, rgba(18, 18, 18, 0.62) 0%, rgba(0, 0, 0, 0.74) 100%)",
 
     // Patrón de puntos sobre el banner. "" para quitarlo.
     patronColor: "",
