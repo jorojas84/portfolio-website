@@ -27,7 +27,7 @@ window.SITE_DATA = {
        opacidadTarjetas: 0 (transparente) a 1 (sólido blanco).
        blur: desenfoque en px del cristal.
        brillo: intensidad del reflejo "liquid" (0 lo apaga, 1 máximo). */
-    opacidadTarjetas: 0.5,
+    opacidadTarjetas: 0.2,
     blur: 15,
     brillo: 0.5,
 
@@ -35,7 +35,7 @@ window.SITE_DATA = {
        Independientes de las tarjetas de abajo.
        opacidadBanner: 0 (transparente) a 1 (negro sólido).
        blurBanner: desenfoque en px del cristal del banner. */
-    opacidadBanner: 0.5,
+    opacidadBanner: 0.8,
     blurBanner: 22,
 
     /* (Opcional) Si prefieres definir TÚ el gradiente exacto en vez de usar
