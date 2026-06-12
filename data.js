@@ -17,8 +17,7 @@ window.SITE_DATA = {
        Opción B — degradado abstracto (se usa si fondoImagen está ""). */
     fondoImagen: "",
     fondoPagina:
-      "radial-gradient(70% 90% at 50% 0%, #8FB8EC 0%, rgba(143,184,236,0) 65%), radial-gradient(60% 80% at 85% 85%, #A8CBE8 0%, rgba(168,203,232,0) 60%), #DCE6F2"
-      //"radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127,168,232,0) 62%), radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240,174,126,0) 60%), radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126,203,166,0) 58%), radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182,138,224,0) 60%), radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232,184,200,0) 55%), #D8DEE9",
+      "radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127,168,232,0) 62%), radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240,174,126,0) 60%), radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126,203,166,0) 58%), radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182,138,224,0) 60%), radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232,184,200,0) 55%), #D8DEE9",
 
     // Otros fondos de página listos para copiar en fondoPagina:
     // Azul hielo:  "radial-gradient(70% 90% at 50% 0%, #8FB8EC 0%, rgba(143,184,236,0) 65%), radial-gradient(60% 80% at 85% 85%, #A8CBE8 0%, rgba(168,203,232,0) 60%), #DCE6F2"
@@ -83,8 +82,7 @@ window.SITE_DATA = {
      - imagen: ruta a la vista previa (p. ej. "assets/img/proyecto1.png");
        "" muestra un recuadro de marcador de posición.
      - badge: sigla corta (SQL, PBI, PY...) que sale en el cuadrito.
-     - pdf: ruta al PDF con la info del proyecto (p. ej. "assets/docs/p1.pdf").
-       El botón "Ver proyecto" abre un popup con ese PDF.                */
+     - links: cada botón del proyecto; el primero se pinta oscuro.       */
   proyectos: [
     {
       destacado: true,
@@ -94,7 +92,10 @@ window.SITE_DATA = {
       descripcion:
         "Limpieza y análisis de 50.000 registros de ventas; identifiqué los 3 productos con mayor margen por región.",
       imagen: "assets/img/proyecto-retail.svg",
-      pdf: "",
+      links: [
+        { texto: "Ver caso", url: "#" },
+        { texto: "GitHub", url: "#" },
+      ],
     },
     {
       destacado: true,
@@ -104,7 +105,10 @@ window.SITE_DATA = {
       descripcion:
         "Dashboard interactivo en Power BI: el 62% de las bajas ocurría en los primeros 90 días de suscripción.",
       imagen: "assets/img/proyecto-churn.svg",
-      pdf: "",
+      links: [
+        { texto: "Ver caso", url: "#" },
+        { texto: "Demo", url: "#" },
+      ],
     },
     {
       destacado: true,
@@ -114,7 +118,10 @@ window.SITE_DATA = {
       descripcion:
         "EDA con pandas y matplotlib sobre 18.000 anuncios: la distancia al centro explica el 40% de la variación de precio.",
       imagen: "assets/img/proyecto-airbnb.svg",
-      pdf: "",
+      links: [
+        { texto: "Ver caso", url: "#" },
+        { texto: "Notebook", url: "#" },
+      ],
     },
     {
       destacado: true,
@@ -124,7 +131,10 @@ window.SITE_DATA = {
       descripcion:
         "Plantilla en Excel con tablas dinámicas que resume ventas e indicadores clave; reduce el cierre mensual de horas a minutos.",
       imagen: "assets/img/proyecto-reporte.svg",
-      pdf: "",
+      links: [
+        { texto: "Ver caso", url: "#" },
+        { texto: "Plantilla", url: "#" },
+      ],
     },
   ],
 
