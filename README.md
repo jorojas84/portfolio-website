@@ -27,9 +27,18 @@ Todo se controla en `data.js` → `tema`:
 - **`fondoPagina`** — si no hay imagen, se usa este degradado abstracto (CSS).
   Hay variantes listas comentadas (azul hielo, atardecer); cuanto más color
   tenga el fondo, más se nota el efecto translúcido.
+- **`opacidadTarjetas`** — opacidad del vidrio de las tarjetas (0 a 1).
+- **`blur`** — desenfoque del cristal en px.
+- **`brillo`** — intensidad del reflejo "liquid" (0 lo apaga, 1 máximo).
 - **`fondoBanner`** — vidrio oscuro del banner. Usa `rgba(...)` para mantener
   la translucidez; sube el alpha (0.9) si lo quieres más opaco.
 - **`patronColor` / `patronTam`** — patrón de puntos del banner (`""` lo quita).
+
+### PDF de cada proyecto
+
+Cada proyecto tiene un campo `pdf`. Sube el archivo (ej. `assets/docs/retail.pdf`)
+y escribe la ruta; el botón **Ver proyecto** abre un popup con ese PDF.
+Si está `""`, el popup muestra "Documento en preparación".
 
 ### Silueta del banner
 

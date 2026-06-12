@@ -15,7 +15,7 @@ window.SITE_DATA = {
        Opción A — tu propia imagen: pon la ruta y listo.
          fondoImagen: "assets/img/fondo.jpg",
        Opción B — degradado abstracto (se usa si fondoImagen está ""). */
-    fondoImagen: "",
+    fondoImagen: "fondo.jpg",
     fondoPagina:
       "radial-gradient(60% 75% at 10% 5%, #7FA8E8 0%, rgba(127,168,232,0) 62%), radial-gradient(50% 65% at 92% 12%, #F0AE7E 0%, rgba(240,174,126,0) 60%), radial-gradient(65% 80% at 82% 92%, #7ECBA6 0%, rgba(126,203,166,0) 58%), radial-gradient(55% 70% at 8% 90%, #B68AE0 0%, rgba(182,138,224,0) 60%), radial-gradient(45% 60% at 50% 50%, #E8B8C8 0%, rgba(232,184,200,0) 55%), #D8DEE9",
 
@@ -27,7 +27,7 @@ window.SITE_DATA = {
        opacidadTarjetas: 0 (transparente) a 1 (sólido blanco).
        blur: desenfoque en px del cristal.
        brillo: intensidad del reflejo "liquid" (0 lo apaga, 1 máximo). */
-    opacidadTarjetas: 0.42,
+    opacidadTarjetas: 0.22,
     blur: 22,
     brillo: 0.5,
 
